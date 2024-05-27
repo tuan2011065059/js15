@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Hóa Đơn Khách Hàng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- bài 1 -->
+    <div class="form-group">
+        <p>Nhập điểm chuẩn</p>
+        <input id="diemChuan" class="form-control d-inline w-25" /> 
+        <p>Nhập điểm môn 1</p>
+        <input id="diem1" class="form-control d-inline w-25" /> 
+        <p>Nhập điểm môn 2</p>
+        <input id="diem2" class="form-control d-inline w-25" /> 
+        <p>Nhập điểm môn 3</p>
+        <input id="diem3" class="form-control d-inline w-25" /> 
+        <p>điểm ưu tiên</p>
+        <select name="" id="khuVuc">
+            <option value="KVA">khu vực A</option>
+            <option value="KVB">khu vực B</option>
+            <option value="KVC">khu vực C</option>
+        </select>
+        <select name="" id="uuTien">
+            <option value="uuTien1">đối tượng ưu tiên 1</option>
+            <option value="uuTien2">đối tượng ưu tiên 2</option>
+            <option value="uuTien3">đối tượng ưu tiên 3</option>
+        </select>
+        <button class="btn btn-success mx-2" id="btnDanhGia">Đánh giá</button>
+        <div class="alert alert-warning mt-2" id="ket-qua-danh-gia">
+            
+        </div>
+    </div>
+
+
+     <!-- bài 2  -->
+
+     <h1>tính hóa đơn tiền điện</h1>
+     <div class="form-group">
+        <label for="customerId">nhập số KW</label>
+        <input type="text" id="soKW">
+        <label for="customerId">nhập tên</label>
+        <input type="text" id="name">
+        <button id="tienDien" class="btn btn-success mx-2">Thanh Toán</button>
+        <div class="alert alert-warning mt-2" id="billDien"></div>
+    </div>
+      <!-- bài 3  -->
+      <p>Nhập họ tên</p>
+      <input id="hoTen" class="form-control d-inline w-25" /> 
+      <p>Thu nhập năm</p>
+      <input id="thuNhap" class="form-control d-inline w-25" /> 
+      <p>số người phụ thuộc</p>
+      <input id="soNguoi" class="form-control d-inline w-25" /> 
+      <button class="btn btn-success mx-2" id="thueNop">thuế nộp</button>
+      <div class="alert alert-warning mt-2" id="ket-qua-thue">
+            
+      </div>
+    <!-- bài 4 
+     -->
+    <h2>Tính Hóa Đơn Khách Hàng</h2>
+    <div class="form-group">
+        <label for="customerId">Mã Khách Hàng:</label>
+        <input type="text" id="customerId">
+    </div>
+    <div class="form-group">
+        <label for="customerType">Loại Khách Hàng:</label>
+        <select id="customerType">
+            <option value="nhaDan">Nhà Dân</option>
+            <option value="doanhNghiep">Doanh Nghiệp</option>
+        </select>
+    </div>
+    <div class="form-group hidden" id="connectionsGroup">
+        <label for="connections">Số Kết Nối:</label>
+        <input type="number" id="connections" min="0" value="0">
+    </div>
+    <div class="form-group">
+        <label for="premiumChannels">Số Kênh Cao Cấp:</label>
+        <input type="number" id="premiumChannels" min="0" value="0">
+    </div>
+    <div class="form-group">
+        <button id="btnHoaDon">Tính Hóa Đơn</button>
+    </div>
+    <div class="form-group">
+        <label for="totalBill">Tổng Hóa Đơn:</label>
+        <input type="text" id="totalBill" readonly>
+    </div>
+
+    <script src="./index.js">
+        
+    </script>
+</body>
+</html>
